@@ -2,9 +2,6 @@ FROM eclipse-temurin:21-jdk-jammy
 
 WORKDIR /app
 
-COPY . .
+COPY build/libs/*.jar app.jar
 
-RUN chmod +x gradlew
-RUN ./gradlew build -x test
-
-CMD ["java", "-jar", "build/libs/medical-management-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
