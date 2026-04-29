@@ -24,6 +24,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/medicaldb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: mysql
+      SERVER_PORT: 8080
     restart: always
 
 volumes:
